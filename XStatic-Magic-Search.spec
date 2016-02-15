@@ -4,7 +4,7 @@
 #
 Name     : XStatic-Magic-Search
 Version  : 0.2.5.1
-Release  : 9
+Release  : 10
 URL      : https://pypi.python.org/packages/source/X/XStatic-Magic-Search/XStatic-Magic-Search-0.2.5.1.tar.gz
 Source0  : https://pypi.python.org/packages/source/X/XStatic-Magic-Search/XStatic-Magic-Search-0.2.5.1.tar.gz
 Summary  : Magic-Search 0.2.5 (XStatic packaging standard)
