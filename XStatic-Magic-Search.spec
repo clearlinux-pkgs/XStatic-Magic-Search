@@ -4,7 +4,7 @@
 #
 Name     : XStatic-Magic-Search
 Version  : 0.2.5.1
-Release  : 17
+Release  : 18
 URL      : http://pypi.debian.net/XStatic-Magic-Search/XStatic-Magic-Search-0.2.5.1.tar.gz
 Source0  : http://pypi.debian.net/XStatic-Magic-Search/XStatic-Magic-Search-0.2.5.1.tar.gz
 Summary  : Magic-Search 0.2.5 (XStatic packaging standard)
