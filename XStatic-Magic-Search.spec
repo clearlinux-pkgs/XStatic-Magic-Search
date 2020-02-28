@@ -4,7 +4,7 @@
 #
 Name     : XStatic-Magic-Search
 Version  : 0.2.5.2
-Release  : 23
+Release  : 24
 URL      : https://files.pythonhosted.org/packages/1f/65/ae791ee9e27dde8b2a94126c3e7812772ab2536e4742913a929da20b1e6d/XStatic-Magic-Search-0.2.5.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1f/65/ae791ee9e27dde8b2a94126c3e7812772ab2536e4742913a929da20b1e6d/XStatic-Magic-Search-0.2.5.2.tar.gz
 Summary  : Magic-Search 0.2.5 (XStatic packaging standard)
@@ -15,25 +15,12 @@ Requires: XStatic-Magic-Search-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
+XStatic-MagicSearch
 -------------------
-        
-        MagicSearch is an AngularJS directive that provides a UI for both faceted
-        filtering and as-you-type filtering. It is intended for filtering tables,
-        such as an AngularJS smart-table, but it can be used in any situation
-        where you can provide it with facets/options and consume its events.
-        
-        MagicSearch was initially developed by David Kavanagh for Eucalyptus.
-        
-        
-        MagicSearch javascript library packaged for setuptools (easy_install) / pip.
-        
-        This package is intended to be used by **any** project that needs these files.
-        
-        It intentionally does **not** provide any extra code except some metadata
-        **nor** has any extra requirements. You MAY use some minimal support code from
-        the XStatic base package, if you like.
-        
-        You can find more info about the xstatic packaging way in the package `XStatic`.
+MagicSearch is an AngularJS directive that provides a UI for both faceted
+filtering and as-you-type filtering. It is intended for filtering tables,
+such as an AngularJS smart-table, but it can be used in any situation
+where you can provide it with facets/options and consume its events.
 
 %package python
 Summary: python components for the XStatic-Magic-Search package.
@@ -49,6 +36,7 @@ python components for the XStatic-Magic-Search package.
 Summary: python3 components for the XStatic-Magic-Search package.
 Group: Default
 Requires: python3-core
+Provides: pypi(XStatic-Magic-Search)
 
 %description python3
 python3 components for the XStatic-Magic-Search package.
@@ -56,13 +44,15 @@ python3 components for the XStatic-Magic-Search package.
 
 %prep
 %setup -q -n XStatic-Magic-Search-0.2.5.2
+cd %{_builddir}/XStatic-Magic-Search-0.2.5.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570210850
+export SOURCE_DATE_EPOCH=1582850684
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
